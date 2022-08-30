@@ -122,6 +122,28 @@ void inserirElemento()
 
 void excluirElemento()
 {
+	int deleta;
+	cout << "Digite o elemento a ser excluído: ";
+	cin >> deleta;
+	int pos = posicaoElemento(deleta);
+
+	if (pos != -1)
+	{
+		lista[pos] = 0;
+		
+		for (int i = 0; i < nElementos-1; i++)
+		{
+			lista[pos] = lista[pos + 1];
+			nElementos--;
+		}
+		cout << "O elemento foi deletado";
+	}
+	else
+	{
+		cout << "O elemento nao existe";
+	}
+
+	
 
 
 }
